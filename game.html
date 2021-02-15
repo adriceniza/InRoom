@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía - InRoom</title>
+  
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@4.x.x/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
+    <script id="plane" type="text/html">
+      <a-entity class="link"
+        geometry="primitive: plane; height: 1; width: 1"
+        material="shader: flat; src: ${thumb}"
+        event-set__mouseenter="scale: 1.2 1.2 1 ; _target: #image-360; _delay: 300; material.src: ${src}"
+        event-set__mouseleave="scale: 1 1 1"
+        proxy-event="event: mouseenter; to: #image-360; as: fade"
+        sound="on: mouseenter; src: #click-sound"></a-entity>
+    </script>
+  
+  <link rel="shortcut icon" type="image/png" href=img/1280-200.png />
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/components/toggle-sound.js"></script>
+</head>
+
+<body>
+  <!--Game-->
+  <div class="button-container">
+    <button id="speaker-button">
+      <img id="speaker-img" src="img/sound-off.png" alt="texture">
+    </button>
+  </div>
+  <a-scene>
+    <a-assets>
+      <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+
+      <!-- Images. -->
+      <img id="palacete-thumb" src="img/Palacete800.jpg"
+        alt="palacete-thumb">
+      <img id="triana" src="img/A-Frame/Triana.jpg" alt="triana">
+      <img id="Triana-thumb" src="img/TRIANA-THUMB.jps"
+        alt="Triana-thumb">
+      <img id="catedral" src="img/A-Frame/CATEDRAL1.jpg" alt="catedral">
+      <img id="catedral-thumb" src="img/Catedral_Santa_Ana.jpg"
+        alt="catedral-thumb">
+      <img id="santelmo" src="img/A-Frame/SanTelmo.jpg" alt="santelmo">
+      <img id="santelmo-thumb" src="img/SANTELMO-THUMB.jpg"
+        alt="santelmo-thumb">
+      <audio id="sound-wind-outside" src="ogg/135034__mrlindstrom__windloop6sec.ogg" preload="auto"></audio>
+    </a-assets>
+
+    <!-- 360-degree image. -->
+    <a-sky id="image-360" radius="10" src="#triana"
+    sound="src: #sound-wind-outside; loop: true" 
+    data-sounding="false"
+    animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
+    animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade"></a-sky>
+
+    <!-- Link template we will build. -->
+    <a-entity id="links" layout="type: line; margin: 1.5" position="-1.5 2.3 -7">
+      <a-entity template="src: #plane" data-src="#triana" data-thumb="#Triana-thumb"></a-entity>
+      <a-entity template="src: #plane" data-src="#catedral" data-thumb="#catedral-thumb"></a-entity>
+      <a-entity template="src: #plane" data-src="#santelmo" data-thumb="#santelmo-thumb"></a-entity>
+      <a-entity template="src: #plane" data-src="#santelmo" data-thumb="#palacete-thumb"></a-entity>
+       
+    </a-entity>
+    
+    
+    <!-- Camera + Cursor. -->
+    <a-camera>
+      <a-cursor id="cursor" 
+      animation__mouseenter="property: scale; startEvents: mouseenter; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150 ; _delay: 370" 
+      animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1 to: 0.1 0.1 0.1; dur: 1500" 
+      event-set__mouseenter="_event: mouseenter; color: #25FBF1 ;" 
+      event-set__mouseleave="_event: mouseleave; color: black" 
+      raycaster="objects: .link" 
+      material="color: #000000; shader: flat; opacity: 1" 
+      cursor position="0 0 -1" 
+      geometry="primitive: sphere; radius: 0.005"></a-cursor>
+    </a-camera>
+  </a-scene>
+  
+
+</body>
+
+</html>

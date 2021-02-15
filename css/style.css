@@ -1,0 +1,314 @@
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+h1 { font-size: 66px; font-weight: 600; line-height: 80px;}
+h2 { font-size: 48px;margin-bottom: 30px;}
+
+p {font-size: 18px;
+color: rgb(156, 156, 156);
+line-height: 1.8;
+margin-bottom: 0;
+}
+
+section {
+    padding: 120px 0px;
+}
+.bg-light-grey {
+    background-color: #f5f5f5;
+}
+#canteras-text {
+    z-index: 2;
+}
+#portfolio-styles-c a h2:hover{
+    text-decoration: none;
+    z-index: 2;
+}
+
+.topmargin-xs {margin-top: 15px;}
+.topmargin-sm {margin-top: 30px;}
+.topmargin-lg {margin-top: 60px;}
+
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+    min-height: 100px;
+    z-index: 10;
+}
+
+.nav-link {
+    color: #7c7c7c;
+}
+.nav-link:hover {
+    color: rgb(17, 17, 17);
+    transition-delay: 0.05s;}
+
+.logo-brand {
+    min-width: 100px;
+    max-width: 110px;
+}
+
+.portfolio-details h2:hover {
+    text-decoration: none;
+}
+.portfolio-details p:hover {
+    text-decoration: none;
+}
+.portfolio-details h2:hover {
+    text-decoration: none;
+}
+.portfolio-details h2:hover {
+    text-decoration: none;
+}
+
+
+
+#game {
+    position: relative;
+    display: inline-block;
+    padding: 20px 20px;
+    color:  #2f2f2f;
+    background: white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 25px;
+    overflow: hidden;
+    transition: 0.2s;
+    min-width: 160px;
+    min-height: 80px;
+    margin-top: 5%;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    
+    
+}
+#game:hover {
+    position: relative;
+    display: inline-block;
+    padding: 20px 20px;
+    color: #085ea5;
+    font-size: 28px;
+    min-width: 160px;
+    max-width: 160px;
+    max-height: 80px;
+    background: rgb(209, 209, 209);
+    transition-delay: 0.2s;
+    transition: 0.45s;
+    
+
+
+}
+
+#game span {
+    position: absolute;
+    display: block;
+
+}
+
+
+
+
+.navbar-toggler {font-size: 40px;}
+.navbar-toggler:focus { outline: none}
+#herovideo{
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+
+    
+
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+#hero {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    min-height: 700px;
+    color: white;
+}
+#portfoliosect{
+    background-color: #f5f5f5;
+}
+
+#contenthero{
+    padding-top: 200px;
+}
+
+#hero p {
+    color: #ffffff;
+}
+
+#portfoliosect-intro h2,p{
+    color: #2e2e2e;
+}
+.content-center {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+.portfolio-container {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 2px;
+
+}
+
+.portfolio-container img {
+    min-width: 1100px;
+    max-width: 1100px;
+    min-height: 600px;
+    max-height: 600px;
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    text-decoration: none;
+
+
+}
+.portfolio-container:hover img {
+    -moz-transforms: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: blur(2px);
+}
+
+.portfolio-details {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 2;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    
+}
+.portfolio-details h2 {
+    margin-bottom: 0px;
+
+}
+.portfolio-details h2:hover, a:hover, h2:link, a:link, h2:active, a:active{
+    margin-bottom: 0px;
+    text-decoration: none;
+}
+
+.portfolio-details a h2, .portfolio-details a p {
+    color: #ffffff;
+
+
+}
+
+.tales {
+    width: 100%;
+}
+
+
+#aboutussect img {
+    min-height: 300px;
+    min-width: 500px;
+    max-height: 300px;
+    max-width: 500px;
+
+}
+
+
+
+
+
+#college img{
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+#profileimage{
+    position: absolute;
+    float: right;
+    margin-left: 50px;
+    margin-top: -20px;
+}
+
+.imgRoundedCRUD{
+    width: 300px !important;
+    height: 300px !important;
+    border-radius: 150px !important;
+}
+.imgRounded{
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 150px !important;
+}
+
+#college img:hover {
+    filter: grayscale(80%);
+    -moz-transforms: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);}
+    .contenedor {overflow:hidden}
+
+
+
+.hidden {
+    display: none;
+}
+
+#signin-modal{
+    color: #7c7c7c;
+    padding: 5px;
+    font-size: 16px;
+}
+#login input{
+    outline: none;
+    width: 50px;
+    border-style: none ;
+    border-bottom: 2px solid #7c7c7c;
+    transition: 1s;
+    height: 20px;
+}
+#login input[type=email]:focus {
+    outline: none;
+    border: hidden;
+    border-bottom: 2px solid #7c7c7c;
+    transition: 1s;
+    width: 150px;
+    height: 20px;
+  }
+#login input[type=password]:focus {
+    outline: none;
+    border: hidden;
+    border-bottom: 2px solid #7c7c7c;
+    transition: 1s;
+    width: 150px;
+    height: 20px;
+  }
+
+#login button{
+    height: 30px;
+    width: 40px;
+    font-size: 14px;
+}
+#login button:focus{
+    justify-content: center;
+    font-size: 13px;
+    transition: 0.2s;
+}

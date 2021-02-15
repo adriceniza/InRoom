@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>InRoom</title>
+  <link>http://localhost/TurismoVR-master/</link>
+  <description>Awesome free VR experience</description>
+  <item>
+    <title>Galery</title>
+    <link>http://localhost/TurismoVR-master/galery.html</link>
+    <description>Galery of InRoom</description>
+  </item>
+  <item>
+    <title>Forms</title>
+    <link>http://localhost/TurismoVR-master/form.html</link>
+    <description>Forms</description>
+  </item>
+</channel>
+
+</rss>
