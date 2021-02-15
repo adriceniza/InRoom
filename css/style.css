@@ -223,23 +223,23 @@ video {
 }
 
 
-#aboutussect img {
-    min-height: 300px;
-    min-width: 500px;
-    max-height: 300px;
-    max-width: 500px;
 
-}
 
 
 
 
 
 #college img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 80%;
     -moz-transition: all 0.8s;
     -webkit-transition: all 0.8s;
     transition: all 0.8s;
 }
+
+
 
 #profileimage{
     position: absolute;
