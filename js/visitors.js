@@ -17,7 +17,7 @@ var databaseRef;
 
 function initialize() {
     newvisitor = document.getElementById('new-visitor');
-    newvisitor.addEventListener('submit', enviarfirebase, false);
+    newvisitor.addEventListener('submit', enviarfirebase, switchtocreate,  false);
 
     var buttonRegister = document.getElementById('finishRegisterr');
     buttonRegister.addEventListener('click', register ,false)
@@ -48,9 +48,21 @@ function initialize() {
     signinButton.addEventListener('click' , abrirmodal);
 
     showImagesFirebase();
+
+
+    
     
 }
 
+function switchtocreate(){
+    var button = document.getElementById('new-visitor-btn');
+    if(button.value === MODIFICAR){
+        button.value = CREATE;
+        modo = CREATE;
+    }
+    
+    
+}
 
 function abrirmodal(){
     event.preventDefault()
@@ -357,6 +369,9 @@ function enviarfirebase(event) {
                 Nombre: event.target.firstname.value,
                 Ubicación: event.target.country.value,
             });
+            document.getElementById('new-visitor-btn').value = CREATE;
+            modo = CREATE;
+
             break;
     }
 
