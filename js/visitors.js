@@ -17,7 +17,7 @@ var databaseRef;
 
 function initialize() {
     newvisitor = document.getElementById('new-visitor');
-    newvisitor.addEventListener('submit', enviarfirebase, switchtocreate,  false);
+    newvisitor.addEventListener('submit', enviarfirebase, switchtocreate ,   false);
 
     var buttonRegister = document.getElementById('finishRegisterr');
     buttonRegister.addEventListener('click', register ,false)
@@ -48,6 +48,7 @@ function initialize() {
     signinButton.addEventListener('click' , abrirmodal);
 
     showImagesFirebase();
+
 
 
     
@@ -293,13 +294,13 @@ function mostrarVisitantes() {
 
                 '</td>' +
                 '<td>' +
-                '<button id="editCRUD" class="btn btn-primary editar hidden" data-visitante="' + key + '">' +
+                '<button id="editCRUD" class="btn btn-primary editar crudbuttons hidden" data-visitante="' + key + '">' +
                 '<i class="fas fa-edit"></i>' +
                 '</button>' +
                 '</td>' +
 
                 '<td>' +
-                '<button id="removeCRUD" class="btn btn-danger borrar hidden" data-visitante="' + key + '">' +
+                '<button id="removeCRUD" class="btn btn-danger borrar crudbuttons hidden" data-visitante="' + key + '">' +
                 '<i class="fas fa-trash"></i>' +
                 '</button>' +
                 '</td>' +
@@ -382,6 +383,13 @@ function enviarfirebase(event) {
 function toggleVisitor(newvisitor) {
     var x = document.getElementById('newvisitor');
     x.classList.toggle('hidden');
+    var z = document.getElementById('toggle-btn');
+
+    if(z.innerText === 'Abrir'){
+        z.innerText = 'Cerrar'
+    }else{
+        z.innerText = 'Abrir'
+    }
 }
 
 
